@@ -1,21 +1,106 @@
+/* Reset default margin and padding */
 * {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-html, body {
   margin: 0;
-  border: 0;
   padding: 0;
-  background-color: #fff;
+  box-sizing: border-box;
 }
 
-main {
-  margin: auto;
-  width: 50%;
+/* Body and overall layout */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: #333;
+  color: #fff;
   padding: 20px;
+  text-align: center;
 }
 
-main > h1 {
+header h1 {
+  font-size: 2.5em;
+}
+
+header p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+h2 {
   text-align: center;
-  font-size: 3.5em;
+  font-size: 2em;
+  margin-top: 20px;
+}
+
+#courses {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.course {
+  background-color: #fff;
+  padding: 20px;
+  width: 30%;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.course h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.course p {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+#promotion {
+  background-color: #ffeb3b;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #courses {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .course {
+    width: 80%;
+    margin: 10px 0;
+  }
 }
